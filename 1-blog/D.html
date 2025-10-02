@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="#" method="get">
+      <div>
+        <label for="query"></label>
+        <input
+          type="text"
+          placeholder="запрос"
+          id="query"
+          name="search_query"
+          title="нужно ввести запрос"
+          minlength="4"
+          maxlength="20"
+          pattern="/^\d+$/"
+          required />
+        <button type="submit">кнопка</button>
+        <input type="email" name="email" id="" />
+        <input type="url" name="url" id="" />
+      </div>
+      <div>
+        <label for="agree">Согласен с обработкой данных</label>
+        <input type="checkbox" name="agree" id="agree" />
+      </div>
+      <div>
+        <label for="all">Поиск по всюду</label>
+        <input type="radio" name="search" id="all" value="all" />
+      </div>
+      <div>
+        <label for="youtube">Поиск на youtube</label>
+        <input type="radio" name="search" id="youtube" value="youtube" />
+      </div>
+      <div>
+        <label for="topic">Магазин</label>
+        <select name="topic" id="topic">
+          <option value="1">Чипсы</option>
+          <option value="2">Пиво</option>
+          <option value="3">Мясо</option>
+          <optgroup label="Популярное">
+            <option value="1">Чипсы</option>
+            <option value="2">Пиво</option>
+            <option value="3">Мясо</option>
+          </optgroup>
+          <optgroup label="Популярное">
+            <option value="1">Чипсы</option>
+            <option value="2">Пиво</option>
+            <option value="3">Мясо</option>
+          </optgroup>
+        </select>
+      </div>
+      <div>
+        <label for="volume">Громкость</label>
+        <input
+          type="range"
+          name="volume"
+          id="volume"
+          min="0"
+          max="10"
+          step="2" />
+      </div>
+      <div>
+        <label for="num">Оценка</label>
+        <input type="number" name="num" id="num" min="0" max="10" step="1" />
+      </div>
+      <div>
+        <label for="text"></label>
+        <textarea
+          name="text"
+          id="text"
+          rows="10"
+          cols="100"
+          placeholder="Введите коментарий"></textarea>
+
+        <!--cols и rows устанавливают размер области-->
+      </div>
+      <div>
+        <label for=""></label>
+        <button type="submit">Поиск на youtube</button>
+      </div>
+    </form>
+  </body>
+</html>

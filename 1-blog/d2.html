@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <main>
+      <article>
+        <form action="#">
+          <h1>Свяжитесь со мной</h1>
+          <div>
+            <label for="email">email*</label>
+            <input
+              type="email"
+              name="имейл"
+              id="email"
+              placeholder="email"
+              required />
+          </div>
+          <div>
+            <label for="telegram">telegram*</label>
+            <input
+              type="text"
+              name="telegram"
+              id="telegram"
+              placeholder="Введите теллеграм аккаунт"
+              required />
+          </div>
+          <div>
+            <label for="topic">тема</label>
+            <select name="topic" id="topic" required>
+              <optgroup label="Приобрести урок">
+                <option value="course">Приобрести урок</option>
+                <option value="feedback">Обратная связь</option>
+              </optgroup>
+            </select>
+          </div>
+          <div>
+            <label for="text"></label>
+            <textarea
+              name="text"
+              id="text"
+              placeholder="введите коментарий"
+              min="10"
+              max="20"
+              required>
+            </textarea>
+          </div>
+
+          <div>
+            <button type="submit">Отправить</button>
+          </div>
+        </form>
+      </article>
+    </main>
+  </body>
+</html>

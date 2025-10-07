@@ -1,0 +1,41 @@
+body {
+    background-color: #ffa5a5;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+p  {
+    font-size: 26px;
+    color: #999999;
+}
+
+form {
+    background-color: #fffefe;
+}
+
+h2 {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+#name, #email, #last_name {
+    background-color: #f5f5f5;
+    font-size: 16px;
+}
+
+button {
+    background-color: #089fe0;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+a {
+    color: #089fe0;
+}
+label {
+    color: #666666;
+}
+
+

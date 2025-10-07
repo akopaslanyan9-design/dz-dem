@@ -83,11 +83,11 @@ letter-spacing: 0%;
 
 
 
-.txtOne { 
+.textOne { 
 font-family: Roboto;
 font-weight: 400;
 font-size: 20px;
-
+color: #FFFFFF;
 line-height: 32px;
 letter-spacing: 0%;
 
@@ -104,7 +104,7 @@ line-height: 30px;
 letter-spacing: 0%;
 text-decoration-style: solid;
 text-decoration-thickness: 0%;
-
+color: #FFFFFF;
 }
 
 span {

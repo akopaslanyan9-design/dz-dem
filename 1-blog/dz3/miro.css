@@ -1,11 +1,9 @@
 body {
   background: linear-gradient(180deg, #374151 0%, #111827 100%);
   min-height: 100vh; 
-  margin: 0;     
-
-}
-main{
-  text-align: center;
+  margin: 0;
+  max-width: 1440px;   
+  
 }
 
 h1 {
@@ -13,7 +11,7 @@ font-weight: 400;
 font-size: 18px;
 line-height: 100%;
 letter-spacing: 0%;
-color: #FFFFFF;   
+color: #FFFFFF;  
 
 }
 ul {
@@ -26,38 +24,58 @@ font-size: 16px;
 line-height: 100%;
 color: #FFFFFF; 
 
+
 }
 
 input {
-  width: 224px;
 height: 40px;
-top: 71px;
-left: 1036px;
-
 opacity: 1;
 border-radius: 100px;
 background: #1F293799;
+border: 1px solid #1F293799;
+opacity: 0.6;
+color: #FFFFFF;
 
 }
 
 .front {
+  display: inline;
   width: 80px;
 height: 16px;
 opacity: 0.6;
+margin: 80px 630px 14px 630px;
 
 }
 
 h2{
-  width: 525px;
-height: 76px;
-top: 210px;
-left: 458px;
+margin: 0 458px 30px 458px;
 opacity: 1;
 color: #ffffff;
 }
 
+ 
+ul.name-work {
+       list-style: none;
+   }
+
+.container {
+  display: flex;
+  align-items: center; /* Выравнивание по вертикали */
+  margin-bottom: 30px;
+}
+
+.avatar {
+  margin-right: 10px;
+}
+
+.name-work {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
 .name {
-  font-family: Roboto;
 font-weight: 400;
 font-size: 16px;
 line-height: 28px;
@@ -66,10 +84,8 @@ color: #ffffff;
 }
 
 .worker {
-  font-family: Roboto;
 font-weight: 400;
 font-size: 14px;
-
 line-height: 28px;
 letter-spacing: 0%;
 
@@ -79,17 +95,18 @@ letter-spacing: 0%;
 #my-image {
  max-height: 594px;
  width: 896px;
+ margin: 0 272px 69px 272px;
 }  
 
 
 
 .textOne { 
-font-family: Roboto;
 font-weight: 400;
 font-size: 20px;
 color: #FFFFFF;
 line-height: 32px;
 letter-spacing: 0%;
+margin: 0 365px 70px 365px;
 
 
 
@@ -97,7 +114,7 @@ letter-spacing: 0%;
 
 
 .textTwo {
-font-family: Roboto;
+  margin: 0 365px 103px 365px;
 font-weight: 400;
 font-size: 16px;
 line-height: 30px;
@@ -115,8 +132,8 @@ span {
 width: 226px;
 height: 28px;
 top: 1730px;
-left: 608px;
 opacity: 0.6;
+margin:0 608px 77px 608px;
  }
 
  footer {

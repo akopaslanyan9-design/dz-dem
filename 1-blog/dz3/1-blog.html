@@ -8,26 +8,30 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
-      <h1>Мой блог</h1>
-
-      <nav>
-        <ul id="headBlog">
+      
+      <nav class="nav">
+         
+        <div class="nav-blog">
+            <div class="text-nav">
+              <span>B</span></div>
+            <h1>Мой блог</h1>
+          <ul class="headBlog">
           <li><a href="#">HTML и CSS</a></li>
           <li><a href="#"> Frontend</a></li>
           <li><a href="#">Backend </a></li>
         </ul>
+        </div>
         <div>
           <label for="search"></label>
-          <input type="text" name="search" id="search" value="Поиск" />
+          <input type="text" name="search" id="search" placeholder="🔍 Поиск" width="auto" / >
         </div>
       </nav>
-      </div>
+     
     </header>
     <main>
-      <article>
-        <p class="front">Frontend 12 мая 2024 года</p>
-        <h2>Теория цвета - Как цвет влияет на поведение потребителей</h2>
+      <article class="article">
+        <p class="front">Frontend <span class="bull">&bull;</span>12 мая 2024 года</p>
+        <h2>Теория цвета - Как цвет влияет на поведение <br>потребителей</h2>
         <div class="container">
         <img src="Ellipse 1.png" />
         <ul class="name-work">
@@ -35,13 +39,12 @@
           <li class="worker">Разработчик</li>
         </ul>
       </div>
-        <a href="1-blog/miro/8cefa35e4f3f91ff718dae25d01f84692996a2cd.png"></a>
       </article>
       <section>
         <img
-          id="my-image"
           src="8cefa35e4f3f91ff718dae25d01f84692996a2cd.png "
-          alt="компьютер" />
+          alt="компьютер" 
+          class="my-image"/>
         <p class="textOne">
           Теория цвета — это особенности эмоционального восприятия человеком тех
           или иных цветовых решений. Цвета и различные их комбинации влияют на

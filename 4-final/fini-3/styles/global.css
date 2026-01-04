@@ -1,0 +1,12 @@
+:root {
+    --width-grid: 1156px;
+    --value-text: #4E5D7C;
+    --color-text-sp: #4E5D7C80;
+}
+
+
+
+
+* {
+    box-sizing: border-box;
+}

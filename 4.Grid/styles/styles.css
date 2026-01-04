@@ -1,0 +1,331 @@
+:root {
+    --color-primary: #6c38cc;
+    --color-primary-hover: #5b2bb2;
+    --color-seconderi: #E47AD5;
+    --color-text: #fafafa;
+    --color-link-hover: #AFB2BF;
+    --color-bg: #16171D;
+    --color-bg-medium: #1E1F29;
+    --color-bg-light: #2E2D3D;
+    --color-stroke: #4D5064;
+    --color-footer: #101114;
+    --border-5: 5px;
+    --border-8: 8px;
+    --gradient: linear-gradient(93.33deg, #D77BE6 9.26%, #BE63E6 42.32%, #6C38CC 104.58%);
+    --border-10: 10px;
+    --layout-width: 1172px;
+
+
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    background: var(--color-bg);
+    margin: 30px;
+    font-family: 'Fira Sans' sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.item, .item, .item,  .item {
+    color: var(--color-text);
+    font-size: 24px;
+    font-weight: 700;
+    border: 2px solid var(--color-primary);
+    text-align: center;
+    padding: 15px;
+}
+
+
+
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+            "header header header header"
+            "sidebar sidebar sidebar sidebar"
+            "content content content content"
+            "footer footer footer footer";
+}           
+
+
+.header {
+    grid-area: header;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.content {
+    grid-area: content;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+
+
+
+
+/**/
+
+.item__header {
+    color: var(--color-text);
+    font-size: 24px;
+    font-weight: 700;
+    border: 2px solid var(--color-primary);
+    text-align: center;
+    padding: 15px;
+}
+
+
+.wrapper__header {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.header__2 {
+    grid-row: 1 / 5;
+    /* занимает все колонки */
+
+    display: grid;
+    grid-template-columns: subgrid;
+    padding: 20px;
+    border: 1px solid #ccc;
+
+}
+
+.header__3 {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 6;
+    grid-column: span 6;
+}
+
+
+
+.video-container {
+    margin-top: 200px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px 20px;
+}
+
+
+.video__content {
+    color: var(--color-text);
+        font-size: 24px;
+        font-weight: 700;
+        border: 2px solid var(--color-primary);
+        text-align: center;
+        padding: 15px;
+}
+
+
+.video {
+    /*Задаем нашему первому элементу свойства*/
+    grid-column: 1 / 5;
+    /* Чтобы занимал все 3 колонки */
+    grid-row: 1 / 1;
+}
+
+.video__content:nth-child(2) {
+    /*Указываем второму элементу(Контент 1) занять первую колонку*/
+    grid-column: 1;
+    grid-row: span 20;
+    
+}
+
+.video__content:nth-child(3) {
+    /*Указываем третьему элементу(Контент 2) занять вторую колонку*/
+    grid-column: 2 / 4;
+    grid-row: span 20;
+
+}
+
+.video__content:nth-child(4) {
+    /*Указываем четвертому элементу(Контент 3) занять третью колонку*/
+    grid-column: 4;
+    grid-row: span 20;
+}
+
+
+
+
+
+
+
+
+/*
+
+.wrapper {
+    display: grid;
+   grid-template-columns: repeat(3, 1fr)auto;
+   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 15px ;
+}
+
+
+.item_1 {
+    order: 1;
+    grid-column: 1 / -1;
+}
+
+.item_2 {
+    order: 3;
+}
+*/
+
+
+
+/* БОКОВАЯ ПАНЕЛЬ */
+.container {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    /* Важно: скрывает боковую панель, если она выходит за границы */
+    position: relative;
+    /* Важно: для позиционирования боковой панели */
+}
+
+.main-content {
+    width: 100%;
+    /* Основной контент занимает всю доступную ширину */
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    /* Плавный переход при появлении панели */
+}
+
+.sidebar {
+    width: 250px;
+    /* Ширина боковой панели */
+    background-color: #f0f0f0;
+    box-sizing: border-box;
+    position: absolute;
+    /* Абсолютное позиционирование */
+    top: 0;
+    left: -250px;
+    /* Скрываем панель слева */
+    height: 100%;
+    padding: 20px;
+    transition: left 0.3s ease;
+    /* Плавный переход при появлении панели */
+    z-index: 1;
+    /* Обеспечивает отображение над основным контентом */
+}
+
+.container:hover .sidebar {
+    left: 0;
+    /* Показываем панель при наведении */
+}
+
+.container:hover .main-content {
+    transform: translateX(250px);
+    /* Сдвигаем основной контент вправо */
+}
+
+/* Дополнительные стили для боковой панели (например, для списка) */
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 5px;
+}
+
+/* Стили для мобильных устройств (опционально) */
+.sidebar-open {
+    left: 0 !important;
+}
+
+
+
+/* НАВИГАЦИЯ */
+
+body {
+    margin: 0;
+    /* Убрать отступы по умолчанию */
+}
+
+.header {
+    background-color: #333;
+    color: white;
+    height: 60px;
+    /* Задайте высоту панели навигации */
+    position: fixed;
+    top: -60px;
+    /* Спрятать панель навигации за верхний край */
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    /* Обеспечить, что панель навигации будет поверх всего */
+    transition: top 0.3s ease;
+    /* Плавный переход */
+}
+
+.header:hover {
+    top: 0;
+    /* Показать панель навигации при наведении */
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    /* Разместить логотип слева, а меню справа */
+    align-items: center;
+    /* Вертикально центрировать содержимое */
+    padding: 0 20px;
+    height: 100%;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-menu li {
+    margin-left: 20px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.main-content {
+    padding: 80px 20px 20px;
+    /* Отступ, чтобы основной контент не перекрывался панелью навигации */
+}
+
+/* Стили для мобильных устройств (опционально) */
+.header-open {
+    top: 0px !important;
+}
